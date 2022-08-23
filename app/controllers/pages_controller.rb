@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    # ghghghghghgh
+    @dogs = Dog.all.sample(3)
   end
 end
