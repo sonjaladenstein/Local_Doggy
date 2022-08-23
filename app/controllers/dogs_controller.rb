@@ -13,6 +13,7 @@ class DogsController < ApplicationController
 
   def create
     @dog = Dog.new(dogs_params)
+    @dog.user = current_user
     @dog.save!
     redirect_to dogs_path
   end

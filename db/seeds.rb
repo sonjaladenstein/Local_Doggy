@@ -10,8 +10,8 @@ require "faker"
 
 5.times do
   user = User.new(
-    first_name: Faker::Name,
-    last_name: Faker::Name,
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
     telephone: Faker::PhoneNumber,
     email: Faker::Internet.email,
     password: Faker::Number.number(digits: 10)
@@ -19,7 +19,7 @@ require "faker"
   user.save!
 
   dog = Dog.new(
-  name: Faker::Name,
+  name: Faker::Name.name,
   age: Faker::Number.between(from: 1, to: 15),
   description: Faker::Marketing.buzzwords,
   location: Faker::Address.city,
@@ -27,14 +27,17 @@ require "faker"
   )
   dog.save!
 
-  dogs = Dogs.all
-  users = Users.all
-  5.times do
-    booking = Booking.new(
-      user_id: users.sample,
-      dog_id: dogs.sample,
-      start_date: Faker::Date,
-      end_date: start_date + random.number.days
-    )
+end
+
+dogs = Dog.all
+users = User.all
+25.times do
+  date = Faker::Date.in_date_period
+  booking = Booking.new(
+    user: users.sample,
+    dog: dogs.sample,
+    start_date: date,
+    end_date: date + rand(1...6).days
+  )
   booking.save!
 end
