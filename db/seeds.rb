@@ -26,4 +26,15 @@ require "faker"
   user: user
   )
   dog.save!
+
+  dogs = Dogs.all
+  users = Users.all
+  5.times do
+    booking = Booking.new(
+      user_id: users.sample,
+      dog_id: dogs.sample,
+      start_date: Faker::Date,
+      end_date: start_date + random.number.days
+    )
+  booking.save!
 end
