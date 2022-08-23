@@ -27,7 +27,8 @@ User.destroy_all
   description: Faker::Marketing.buzzwords,
   location: Faker::Address.city,
   user: user,
-  price: Faker::Number.between(from: 5, to: 50)
+  price: Faker::Number.between(from: 5, to: 50),
+  picture: "https://www.randomdoggiegenerator.com/randomdoggie.php"
   )
   dog.save!
 
