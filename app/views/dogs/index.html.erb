@@ -1,7 +1,10 @@
 <div>
-<% @dogs.each do |dog| %>
-  <p><%= dog.name %></p>
-  <p><%= dog.location %></p>
-  <p><%= dog.price %></p>
-<% end %>
+  <ul>
+      <% @dogs.each do |dog| %>
+        <li><%= dog.name %></li>
+        <li><%= dog.age %></li>
+        <li><%= dog.location %></li>
+        <li><%= dog.price %></li>
+      <% end %>
+  </ul>
 </div>

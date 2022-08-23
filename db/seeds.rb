@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require "faker"
+Booking.destroy_all
+Dog.destroy_all
+User.destroy_all
 
 
 5.times do
@@ -23,7 +26,8 @@ require "faker"
   age: Faker::Number.between(from: 1, to: 15),
   description: Faker::Marketing.buzzwords,
   location: Faker::Address.city,
-  user: user
+  user: user,
+  price: Faker::Number.between(from: 5, to: 50)
   )
   dog.save!
 
