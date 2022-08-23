@@ -1,0 +1,36 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "https://th.bing.com/th/id/OIP.yq2bJZuTLQft8VH64qWKugHaE9?pid=ImgDet&rs=1" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://th.bing.com/th/id/R.c95c446eadc289a7df51a0ec32842bb0?rik=dD%2bOTlAYX6in3Q&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_103581.png&ehk=8q8yMlWay3C1QELvNKZV3%2brEdicOgKTw%2baS0yE5lSuE%3d&risl=&pid=ImgRaw&r=0", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
