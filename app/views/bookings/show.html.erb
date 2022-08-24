@@ -1,15 +1,19 @@
-<h1><%= @booking %></h1>
 
+<h1>You just made a booking</h1>
 <div>
   <p>
-    <%= booking.start_date %>
+    <%= @booking.start_date %>
   </p>
 
   <p>
-    <%= booking.end_date %>
+    <%= @booking.end_date %>
   </p>
 
   <p>
-    <%= booking.dog_id %>
+    <%= @booking.dog.name %>
   </p>
+
 </div>
+<br>
+ <%# <%= link_to "DELETE", dog_booking_path(@booking, @dog),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> %>
