@@ -2,10 +2,13 @@ class BookingsController < ApplicationController
   def create
     @dog = Dog.find(params[:dog_id])
     @booking = Booking.new(bookings_params)
+
+    @booking.start_date = Date.new(params[:booking]["start_date(1i)"].to_i, params[:booking]["start_date(2i)"].to_i, params[:booking]["start_date(3i)"].to_i)
+    @booking.end_date = Date.new(params[:booking]["end_date(1i)"].to_i, params[:booking]["end_date(2i)"].to_i, params[:booking]["end_date(3i)"].to_i)
     @booking.dog = @dog
     @booking.user = current_user
     if @booking.save!
-      redirect_to dog_booking_path(@booking, @dog)
+      redirect_to dog_booking_path(@dog, @booking)
     else
       render 'new', status: :unprocessable_entity
     end
@@ -17,11 +20,11 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(@dog, params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def destroy
-    @booking = Booking.find(@dog, params[:id])
+    @booking = Booking.find(params[:id])
     @booking.delete
     redirect_to dog_path, status: :see_other
   end
