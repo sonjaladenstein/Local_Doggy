@@ -1,31 +1,34 @@
 class BookingsController < ApplicationController
+  def create
+    @dog = Dog.find(params[:dog_id])
+    @booking = Booking.new(bookings_params)
+    @booking.dog = @dog
+    @booking.user = current_user
+    if @booking.save!
+      redirect_to dog_booking_path(@booking, @dog)
+    else
+      render 'new', status: :unprocessable_entity
+    end
+  end
 
   def new
     @booking = Booking.new
+    @dog = Dog.find(params[:dog_id])
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(@dog, params[:id])
   end
 
-  def create
-    @booking = Booking.new(bookings_params)
-    @booking.save!
-    redirect_to bookings_path
+  def destroy
+    @booking = Booking.find(@dog, params[:id])
+    @booking.delete
+    redirect_to dog_path, status: :see_other
   end
+
   private
 
   def bookings_params
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :booking_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
-
-
-# @list = List.find(params[:list_id])
-#     @bookmark = Bookmark.new(bookmark_params)
-#     @bookmark.list = @list
-#     if @bookmark.save
-#       redirect_to list_path(@list)
-#     else
-#       render 'new', status: :unprocessable_entity
-#     end
