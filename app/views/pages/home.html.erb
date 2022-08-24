@@ -7,3 +7,9 @@
 <% @dogs.each do |dog| %>
   <%= dog.name %>
 <% end %>
+
+<br>
+<div class="btn btn-primary">
+  <%# <p>Create dog</p> %>
+  <%= link_to 'Create dog', new_dog_path(@dog), :class => "btn" %>
+</div>
