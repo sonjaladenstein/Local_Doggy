@@ -21,8 +21,7 @@
   </p>
 </div>
 <br>
-<%= link_to "BOOK A DOG", new_dog_booking_path %>
-
+ <%= link_to "BOOK A DOG", new_dog_booking_path(@dog) %>
 <br>
 
 <%= link_to 'Create Dog', new_dog_path(@dog), :class => "btn btn-primary" %>
