@@ -1,18 +1,20 @@
 <div>
+ <img src="<%= @dog.picture %>" alt="">
   <p>
-    <%= dog.name %>
+    <%= @dog.name %>
   </p>
 
   <p>
-    <%= dog.adress %>
+    <%= @dog.location %>
   </p>
 
   <p>
-    <%= dog.description %>
+    <%= @dog.description %>
   </p>
 
   <p>
-    <%= dog.price %>
+    <%= @dog.price %>
   </p>
 </div>
 <br>
+<%= link_to "BOOK A DOG", new_booking_path %>
