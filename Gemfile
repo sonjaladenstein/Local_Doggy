@@ -81,4 +81,10 @@ group :test do
   gem "webdrivers"
 end
 
-gem "simple_form", github: "heartcombo/simple_form"
+# gem "simple_form", github: "heartcombo/simple_form"
+
+# Image upload Gem with security
+gem "dotenv-rails", groups: [:development, :test]
+
+# Gem file for the cloudinary upload set up
+gem "cloudinary"
