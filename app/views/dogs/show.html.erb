@@ -15,6 +15,17 @@
   <p>
     <%= @dog.price %>
   </p>
+
+   <p>
+    <%= cl_image_tag @dog.photo.key, height: 100, width: 200, crop: :fill %>
+  </p>
 </div>
 <br>
+
  <%= link_to "BOOK A DOG", new_dog_booking_path(@dog) %>
+
+
+<br>
+
+<%= link_to 'Create Dog', new_dog_path(@dog), :class => "btn btn-primary" %>
+<%= link_to 'Show Dogs', dogs_path(@dog), :class => "btn btn-primary" %>

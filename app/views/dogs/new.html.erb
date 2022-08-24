@@ -5,9 +5,12 @@
     <%= f.input :age %>
     <%= f.input :description %>
     <%= f.input :location %>
+    <%= f.input :photo, as: :file %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<%= link_to 'Show Dogs', dogs_path(@dogs), :class => "btn btn-primary" %>

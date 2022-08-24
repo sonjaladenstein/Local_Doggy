@@ -7,3 +7,8 @@
 <% @dogs.each do |dog| %>
   <%= dog.name %>
 <% end %>
+
+<br>
+
+<%= link_to 'Create dog', new_dog_path(@dog), :class => "btn btn-primary" %>
+<%= link_to 'Show Dogs', dogs_path(@dogs), :class => "btn btn-primary" %>
