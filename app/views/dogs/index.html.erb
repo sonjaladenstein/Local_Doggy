@@ -5,4 +5,7 @@
         <li>Name: <%= link_to dog.name, dog_path(dog.id) %> | Age: <%= dog.age %> | Location: <%= dog.location %> | Price: <%= dog.price %>€/h </li>
       <% end %>
   </ul>
-</div>
+
+<br>
+
+<%= link_to 'Create dog', new_dog_path(@dogs), :class => "btn btn-primary" %>
