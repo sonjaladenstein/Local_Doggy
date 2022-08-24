@@ -1,10 +1,8 @@
 <div>
   <ul>
       <% @dogs.each do |dog| %>
-        <li><%= dog.name %></li>
-        <li><%= dog.age %></li>
-        <li><%= dog.location %></li>
-        <li><%= dog.price %></li>
+        <img src="<%= dog.picture %>" alt="">
+        <li>Name: <%= dog.name %> | Age: <%= dog.age %> | Location: <%= dog.location %> | Price: <%= dog.price %>€/h </li>
       <% end %>
   </ul>
 </div>
