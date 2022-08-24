@@ -2,7 +2,15 @@
   <ul>
       <% @dogs.each do |dog| %>
         <img src="<%= dog.picture %>" alt="">
-        <li>Name: <%= link_to dog.name, dog_path(dog.id) %> | Age: <%= dog.age %> | Location: <%= dog.location %> | Price: <%= dog.price %>€/h </li>
+        <% if dog.photo.attached?  %>
+        <%= cl_image_tag dog.photo.key, height: 200, width: 300, crop: :fill %>
+       <% end %>
+        <li>
+        Name: <%= link_to dog.name, dog_path(dog.id) %>
+        | Age: <%= dog.age %>
+        | Location: <%= dog.location %>
+        | Price: <%= dog.price %>€/h
+        </li>
       <% end %>
   </ul>
 </div>
