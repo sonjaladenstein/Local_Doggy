@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = booking.new(bookings_params)
+    @booking = Booking.new(bookings_params)
     @booking.save!
     redirect_to bookings_path
   end
@@ -19,3 +19,13 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_date, :end_date, :user_id, :booking_id)
   end
 end
+
+
+# @list = List.find(params[:list_id])
+#     @bookmark = Bookmark.new(bookmark_params)
+#     @bookmark.list = @list
+#     if @bookmark.save
+#       redirect_to list_path(@list)
+#     else
+#       render 'new', status: :unprocessable_entity
+#     end
