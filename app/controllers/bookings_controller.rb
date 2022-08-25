@@ -30,6 +30,8 @@ class BookingsController < ApplicationController
     #     info_window: render_to_string(partial: "info_window", locals: {dog: dog})
     #   }
     # end
+    @dog = Dog.find(params[:dog_id])
+    @markers = [{lat: @dog.geocode[0], lng: @dog.geocode[1]}]
   end
 
   def index

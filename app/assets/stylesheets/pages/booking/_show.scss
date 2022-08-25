@@ -1,5 +1,28 @@
 .container-booking-body {
-display: flex;
-background-color: green;
+text-align: center;
+}
 
+.title1 {
+  text-align: center;
+  margin: 60px 0px 20px 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title-bookings {
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dog-pickup {
+  font-family: 'Roboto', sans-serif;
+}
+
+.booking-location {
+  margin-top: 60px;
+}
+.doggy-photo {
+  width: 500px;
+  margin: 25px;
+  border-radius: 5px;
 }
