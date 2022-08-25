@@ -86,7 +86,7 @@ dog4 = Dog.new(
   name: "Simba",
   age: Faker::Number.between(from: 1, to: 15),
   description: "Chilled dog that loves hanging out with children",
-  location: "carrer de lope de vega 4 barcelona",
+  location: "carrer de les ciencies 17 barcelona",
   user: user4,
   price: Faker::Number.between(from: 5, to: 50),
   picture: "https://cdn.britannica.com/49/161649-050-3F458ECF/Bernese-mountain-dog-grass.jpg?q=60"
