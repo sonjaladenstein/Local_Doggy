@@ -1,11 +1,21 @@
-<%= simple_form_for [@dog, @booking] do |f| %>
+<%# <%= simple_form_for [@dog, @booking] do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-  </div>
+  <%# <div class="form-inputs"> %>
+    <%# <%= f.input :start_date %>
+    <%# <%= f.input :end_date %>
+  <%# </div> %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<div id='dog-booking-dates' data-unavailable="<%= @dog.unavailable_dates.to_json %>">
+    <% if current_user.id != @dog.user_id  %>
+ <%= simple_form_for ([@dog, @booking]) do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_start"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker", id: "range_end"} %>
+      <%= f.button :submit, "Submit", class: "btn btn-primary" %>
+    <% end %>
 <% end %>
+
+
+  <%# <div class="form-actions"> %>
+    <%# <%= f.button :submit %>
+  <%# </div> %>
+<%# <% end %>

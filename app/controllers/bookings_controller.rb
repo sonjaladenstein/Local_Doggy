@@ -3,8 +3,12 @@ class BookingsController < ApplicationController
     @dog = Dog.find(params[:dog_id])
     @booking = Booking.new(bookings_params)
 
-    @booking.start_date = Date.new(params[:booking]["start_date(1i)"].to_i, params[:booking]["start_date(2i)"].to_i, params[:booking]["start_date(3i)"].to_i)
-    @booking.end_date = Date.new(params[:booking]["end_date(1i)"].to_i, params[:booking]["end_date(2i)"].to_i, params[:booking]["end_date(3i)"].to_i)
+    # @booking.start_date = Date.new(params[:booking]["start_date(1i)"].to_i, params[:booking]["start_date(2i)"].to_i, params[:booking]["start_date(3i)"].to_i)
+    # @booking.end_date = Date.new(params[:booking]["end_date(1i)"].to_i, params[:booking]["end_date(2i)"].to_i, params[:booking]["end_date(3i)"].to_i)
+
+    @booking.start_date = Date.new(params[:booking][:start_date].to_i)
+    @booking.end_date = Date.new(params[:booking][:end_date].to_i)
+
     @booking.dog = @dog
     @booking.user = current_user
     if @booking.save!
