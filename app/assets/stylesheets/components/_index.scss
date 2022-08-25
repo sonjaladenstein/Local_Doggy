@@ -5,44 +5,144 @@
 @import "navbar";
 @import "map";
 
-
-
-.container {
-  width: 1200px;
+// .body {
+//   background: linear-gradient(#ACE1AF, #2e8b57);
+// }
+.cards-map-container{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-
-
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.photo {
-  width: 500px;
-  margin: 25px;
-  border-radius: 5px;
-
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
 
-.text {
-  width: 500px;
-  margin-bottom: 25px;
-  margin-left: 25px;
-  margin-left: 25px;
-  border-radius: 5px;
-}
+  // Smallest device
+  @media (min-width: 100px) and (max-width: 575px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    .card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+
 
 .card {
-  width: 550px;
-  color: beige;
+  width: 350px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  align-items: center;
-  color: black;
-  border-radius: 5px;
-  // box-shadow: rgb(0,0,0,0.3);
+  flex-grow: 1;
+  // margin-top: 10px;
+  // margin-left: 10px;
+  // margin-right: 10px;
+  // align-items: center;
+  // color: black;
+  // border-radius: 5px;
+  // // box-shadow: rgb(0,0,0,0.3);
 
 }
+
+.card > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.dog-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  text-align: right;
+}
+
+// .card-trip p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+.card .text {
+  padding: 16px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  font-family: Robto;
+}
+
+.dog-name {
+  text-decoration: none;
+  color: darkgreen;
+  font-family: Roboto;
+  text-emphasis: bold;
+}
+
+.map-container {
+  position: sticky;
+  top: 5px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 10px;
+  height: 100vh;
+
+
+}
+// .photo {
+//   width: 500px;
+//   margin: 25px;
+//   border-radius: 5px;
+
+// }
+
+// .text {
+//   width: 500px;
+//   margin-bottom: 25px;
+//   margin-left: 25px;
+//   margin-left: 25px;
+//   border-radius: 5px;
+// }
