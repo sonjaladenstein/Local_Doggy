@@ -1,26 +1,39 @@
-<div class="container">
-  <ul>
-    <% @dogs.each do |dog| %>
-      <div class="card">
-        <img class="photo" src="<%= dog.picture %>" alt="">
-        <% if dog.photo.attached?  %>
-          <img class="photo" src="<%= cl_image_tag dog.photo.key %>" alt="">
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components/banner.css">
+</head>
+<body class="body">
+  <div class="cards-map-container">
+    <div class="card-container">
+        <% @dogs.each do |dog| %>
+          <%= link_to  dog_path(dog.id) do %>
+            <div class="card">
+              <img class="photo" src="<%= dog.picture %>" alt="">
+              <% if dog.photo.attached?  %>
+                <img class="photo" src="<%= cl_image_tag dog.photo.key %>" alt="">
+              <% end %>
+              <div class = "text">
+                <h2 class ="dog-name"> <%= dog.name %></h2>
+                <p>Age: <%= dog.age %></p>
+                <p>Location: <%= dog.location %></p>
+                <p><%= dog.description %></p>
+              </div>
+              <h3 class="dog-price"><%= dog.price %>€/day</h3>
+            </div>
+          <% end %>
         <% end %>
-        <p class="text">
-        Name: <%= link_to dog.name, dog_path(dog.id) %>
-        | Age: <%= dog.age %>
-        | Location: <%= dog.location %>
-        | Price: <%= dog.price %>€/day
-        </p>
-        <p class="text"><%= dog.description %></p>
+    </div>
+    <div class ="map-container">
+      <div style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-    <% end %>
-  </ul>
-</div>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+    </div>
+  </div>
+  <%= link_to 'Create dog', new_dog_path(@dogs), :class => "btn btn-primary" %>
+  </body>
+</html>
 
-<%= link_to 'Create dog', new_dog_path(@dogs), :class => "btn btn-primary" %>
+<%# <%= link_to dog.name, dog_path(dog.id) %> %>
