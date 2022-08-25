@@ -48,6 +48,15 @@ user4 = User.new(
 )
 user4.save!
 
+user5 = User.new(
+  first_name: Faker::Name.name,
+  last_name: Faker::Name.name,
+  telephone: Faker::PhoneNumber,
+  email: Faker::Internet.email,
+  password: Faker::Number.number(digits: 10)
+)
+user5.save!
+
 
 dog1 = Dog.new(
   name: "Bailey",
@@ -75,7 +84,7 @@ dog3 = Dog.new(
   name: "Pepper",
   age: Faker::Number.between(from: 1, to: 15),
   description: "This is our sleepy dog with a big heart that is very easily distracted",
-  location: "carrer ferran trune 1 barcelona",
+  location: "carrer de sant ferran 4 cornellà de llobregat barcelona",
   user: user3,
   price: Faker::Number.between(from: 5, to: 50),
   picture: "https://th.bing.com/th/id/R.ea9ab0497d89c9b406ff28b15fc662ae?rik=5fXoOR8FQ5gguQ&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f34000000%2fDog-dogs-34087524-1265-848.jpg&ehk=ejxUNfTbvo7gWrEUbIfBBTyzEhPfBkco4HsB0H9%2byc4%3d&risl=&pid=ImgRaw&r=0"
@@ -92,6 +101,28 @@ dog4 = Dog.new(
   picture: "https://cdn.britannica.com/49/161649-050-3F458ECF/Bernese-mountain-dog-grass.jpg?q=60"
   )
   dog4.save!
+
+dog5 = Dog.new(
+  name: "Apollo",
+  age: Faker::Number.between(from: 1, to: 15),
+  description: "Loves the cold and going to Andorra in the winter",
+  location: "carrer antartic 13 barcelona  ",
+  user: user5,
+  price: Faker::Number.between(from: 5, to: 50),
+  picture: "https://tse3.mm.bing.net/th?id=OIP.IitgyH10SCQXv6SA2slRGQHaEo&pid=Api&P=0"
+  )
+  dog5.save!
+
+dog6 = Dog.new(
+  name: "Leyla",
+  age: Faker::Number.between(from: 1, to: 15),
+  description: "active and curious she loves walks and hikes",
+  location: "rambla de prim 146 barcelona",
+  user: user5,
+  price: Faker::Number.between(from: 5, to: 50),
+  picture: "https://www.mybestfrienddogcare.co.uk/wp-content/uploads/2019/12/My-Best-Friend-64-1024x793.jpg"
+  )
+  dog6.save!
 
 dogs = Dog.all
 users = User.all
