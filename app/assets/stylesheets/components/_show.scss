@@ -1,0 +1,31 @@
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "map";
+
+
+
+
+.show-container {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: seagreen;
+}
+
+.button {
+  background: linear-gradient(#33b565, #168440);
+  color: white;
+  border-radius: 5px;
+  height: 15px;
+  width: 25px;
+}
+
+.button:hover {
+  background-color: #168440;
+  color: white;
+  height: 20px;
+  width: 30px;
+}
