@@ -1,6 +1,10 @@
 
 <h1>You just made a booking!</h1>
 <div>
+<p>
+    <%= @booking.dog.name %>
+  </p>
+
   <p>
     <%= @booking.start_date %>
   </p>
@@ -8,9 +12,8 @@
   <p>
     <%= @booking.end_date %>
   </p>
-
-  <p>
-    <%= @booking.dog.name %>
+<p>
+<%= @dog.location %>
   </p>
 
 </div>
