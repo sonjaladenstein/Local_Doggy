@@ -20,6 +20,22 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    # # @array_single_dog = []
+    # # @array_single_dog << @booking.dog
+    # @markers = @booking.dog.geocode.map do |dog|
+    #   {
+    #     lat: dog.latitude,
+    #     lng: dog.longitude,
+
+    #     info_window: render_to_string(partial: "info_window", locals: {dog: dog})
+    #   }
+    # end
+    @dog = Dog.find(params[:dog_id])
+    @markers = [{lat: @dog.geocode[0], lng: @dog.geocode[1]}]
+  end
+
+  def index
+    @bookings = Booking.all
   end
 
   def destroy
@@ -34,7 +50,6 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_date, :end_date)
   end
 end
-
 
 # @list = List.find(params[:list_id])
 #     @bookmark = Bookmark.new(bookmark_params)

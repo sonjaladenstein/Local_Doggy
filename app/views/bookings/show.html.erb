@@ -1,18 +1,20 @@
-
-<h1>You just made a booking!</h1>
-<div>
-  <p>
-    <%= @booking.start_date %>
+<h1 class="title1">Congratulations!</h1>
+<h1 class="title-bookings">You've just made a booking!</h1>
+<div class= "container-booking-body">
+<div class= "booking-dog-name">
+<p>
+    Your Doggy - <%= @booking.dog.name %>
   </p>
+  </div>
+  <img class="doggy-photo" <%= cl_image_tag @booking.dog.picture%>
+<div class="booking-dates">
+  <p> You'll have <%=@booking.dog.name%> for the following dates: <%= @booking.start_date %> - <%= @booking.end_date %></p>
 
-  <p>
-    <%= @booking.end_date %>
-  </p>
-
-  <p>
-    <%= @booking.dog.name %>
-  </p>
-
+  </div>
+  <div class="booking-location">
+<p> <h4 class="dog-pickup" >You can pick up <%=@booking.dog.name%> from here! </h4></p>
+<%= @booking.dog.location %>
+</div>
 </div>
 <br>
 
@@ -20,3 +22,8 @@
 <br>
  <%# <%= link_to "DELETE", dog_booking_path(@booking, @dog),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
