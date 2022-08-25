@@ -1,5 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+<div class="container">
+  <div>
+  <h1>LocalDoggy</h1>
+    <p>Find me in app/views/pages/home.html.erb</p>
+
 
 <%= user_signed_in? %>
 <%= current_user %>
@@ -7,8 +11,11 @@
 <% @dogs.each do |dog| %>
   <%= dog.name %>
 <% end %>
-
 <br>
 
-<%= link_to 'Create dog', new_dog_path(@dog), :class => "btn btn-primary" %>
-<%= link_to 'Show Dogs', dogs_path(@dogs), :class => "btn btn-primary" %>
+<div class="image"></div>
+<br>
+
+</div>
+</div>
+</body>
