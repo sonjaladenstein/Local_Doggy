@@ -20,6 +20,20 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    # # @array_single_dog = []
+    # # @array_single_dog << @booking.dog
+    # @markers = @booking.dog.geocode.map do |dog|
+    #   {
+    #     lat: dog.latitude,
+    #     lng: dog.longitude,
+
+    #     info_window: render_to_string(partial: "info_window", locals: {dog: dog})
+    #   }
+    # end
+  end
+
+  def index
+    @bookings = Booking.all
   end
 
   def destroy

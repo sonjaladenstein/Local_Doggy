@@ -1,21 +1,22 @@
-
 <h1>You just made a booking!</h1>
-<div>
+<div class= "d-flex container-booking-body">
+<div class= "booking-dog-name">
 <p>
     <%= @booking.dog.name %>
   </p>
-
+  </div>
+<div class="booking-dates">
   <p>
     <%= @booking.start_date %>
   </p>
-
   <p>
     <%= @booking.end_date %>
   </p>
-<p>
+  </div>
+  <div class="booking-location">
+<p>You can pick up your dog from here!</p>
 <%= @booking.dog.location %>
-  </p>
-
+</div>
 </div>
 <br>
 <%= link_to 'Show Dogs', dogs_path(@dog), :class => "btn btn-primary" %>
