@@ -29,3 +29,10 @@
 
 <%= link_to 'Create Dog', new_dog_path(@dog), :class => "btn btn-primary" %>
 <%= link_to 'Show Dogs', dogs_path(@dog), :class => "btn btn-primary" %>
+
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
