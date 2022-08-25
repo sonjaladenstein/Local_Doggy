@@ -2,3 +2,12 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+import { initFlatpickr } from "./plugins/flatpickr";
+
+document.addEventListener("turbo:load", () => {
+  initFlatpickr();
+
+})
+
+
+// import "./plugins/init_flatpickr";
