@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def create
     @dog = Dog.find(params[:dog_id])
     @booking = Booking.new(bookings_params)
@@ -8,6 +9,10 @@ class BookingsController < ApplicationController
 
     @booking.start_date = Date.new(params[:booking][:start_date].to_i)
     @booking.end_date = Date.new(params[:booking][:end_date].to_i)
+
+
+    @booking.start_date = Date.new(params[:booking]["start_date(1i)"].to_i, params[:booking]["start_date(2i)"].to_i, params[:booking]["start_date(3i)"].to_i)
+    @booking.end_date = Date.new(params[:booking]["end_date(1i)"].to_i, params[:booking]["end_date(2i)"].to_i, params[:booking]["end_date(3i)"].to_i)
 
     @booking.dog = @dog
     @booking.user = current_user
@@ -39,3 +44,13 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_date, :end_date)
   end
 end
+
+
+# @list = List.find(params[:list_id])
+#     @bookmark = Bookmark.new(bookmark_params)
+#     @bookmark.list = @list
+#     if @bookmark.save
+#       redirect_to list_path(@list)
+#     else
+#       render 'new', status: :unprocessable_entity
+#     end

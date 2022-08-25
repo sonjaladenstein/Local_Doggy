@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+<div class="container">
+    <ul>
+        <% @dogs.each do |dog| %>
+        <div class="card">
+            <img class="photo" src="<%= dog.picture %>" alt="">
+            <% if dog.photo.attached?  %>
+              <img class="photo" src="<%= cl_image_tag dog.photo.key %>" alt="">
+            <% end %>
+            <p class="text">
+            Name: <%= link_to dog.name, dog_path(dog.id) %>
+            | Age: <%= dog.age %>
+            | Location: <%= dog.location %>
+            | Price: <%= dog.price %>€/day
+            </p>
+            <p class="text"><%= dog.description %></p>
+        </div>
+        <% end %>
+    </ul>
+=======
 <div>
   <ul>
       <% @dogs.each do |dog| %>
@@ -13,7 +33,13 @@
         </li>
       <% end %>
   </ul>
-
+</div>
 <br>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+>>>>>>> master
+</div>
 
 <%= link_to 'Create dog', new_dog_path(@dogs), :class => "btn btn-primary" %>
