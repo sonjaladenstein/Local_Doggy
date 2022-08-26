@@ -6,11 +6,13 @@
         <%else %>
           <img class="photo" src="<%= book.dog.picture %>" alt="">
         <% end %>
+        <div class="text">
         <h2 class ="dog-name"> <%= book.dog.name %></h2>
         <div class="scroll-text">
           <p>Start-date: <%= book.start_date %></p>
           <p>End-date: <%= book.end_date %></p>
           <h3 class="dog-price"><%= book.dog.price %>€/day</h3>
+        </div>
         </div>
       </div>
   <% end %>
