@@ -1,0 +1,8 @@
+ <div class="card-container">
+        <% @booking.each do |book| %>
+                <h2 class ="dog-name"> <%= book.booking.dog.name %></h2>
+                <p>Start-date: <%= book.booking.start_date %></p>
+                <p>End-date: <%= book.booking.end_date %></p>
+              <h3 class="dog-price"><%= book.booking.dog.price %>€/day</h3>
+          <% end %>
+    </div>
