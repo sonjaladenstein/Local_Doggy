@@ -132,17 +132,14 @@
 
 
 }
-// .photo {
-//   width: 500px;
-//   margin: 25px;
-//   border-radius: 5px;
 
-// }
-
-// .text {
-//   width: 500px;
-//   margin-bottom: 25px;
-//   margin-left: 25px;
-//   margin-left: 25px;
-//   border-radius: 5px;
-// }
+.container-ndog {
+  width: 800px;
+  margin: 0 auto;
+  color: black;
+  background-color: rgb(191, 191, 100);
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}

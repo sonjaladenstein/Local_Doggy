@@ -1,27 +1,36 @@
 // Specific CSS for your home-page
 
 
-.body {
+body {
   font-family: Roboto;
   font-size: 16px;
-  background-image: url("wag-vs-rover-850x520.jpg");
+  color: #000000;
+  // background-image: url("wag-vs-rover-850x520.jpg");
 }
 
-.container {
+.container-welcome {
   width: 500px;
-  margin-top: 50px;
+  text-align: center;
+  color: #F7F6DC;
+  position:relative; left:900px; top:200px;
 }
 
-a {
+// a {
+//   color: #F7F6DC;
+//   text-decoration: none;
+// }
+
+.nav-link {
   color: #F7F6DC;
   text-decoration: none;
+  font-weight: bold;
 }
 
-
-.image {
-  background-image: url("doggy.jpg");
-  height: 200px;
+.banner-home {
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/197/489/305/puppy-leaves-autumn-jumping-wallpaper-708bdf76a3682aa60580c0bedfe47968.jpg");
+  height: 800px;
+  width: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right top;
   background-size: cover;
 }
