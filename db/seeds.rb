@@ -61,11 +61,11 @@ user5.save!
 dog1 = Dog.new(
   name: "Bailey",
   age: Faker::Number.between(from: 1, to: 15),
-  description: "Pround adventurous dog that loves hikes",
+  description: "Playfull active dog that loves hikes",
   location: "carrer de mallorca 133 barcelona",
   user: user1,
   price: Faker::Number.between(from: 5, to: 50),
-  picture: "https://th.bing.com/th/id/R.c7e044473c4c69c9ca921a8c1f430c3d?rik=bYQZCg5iCs%2fcEg&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f32600000%2fDog-dogs-32691594-1600-1200.jpg&ehk=WWpmbs2eW8g8W%2ftqkJiTC%2bA4lycrKkNssrgCJMhWauw%3d&risl=&pid=ImgRaw&r=0"
+  picture: "https://stories.admisure.com/wp-content/uploads/2022/04/istockphoto-1333390833-170667a.jpg"
   )
   dog1.save!
 
