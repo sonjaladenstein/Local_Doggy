@@ -8,6 +8,11 @@
 // .body {
 //   background: linear-gradient(#ACE1AF, #2e8b57);
 // }
+
+body {
+  font-family: Nunito, Helvetica, sans-serif;
+}
+
 .cards-map-container{
   display: flex;
   flex-direction: row;
@@ -138,6 +143,7 @@
   margin: 0 auto;
   margin-top: 20px;
   padding: 15px;
+  font-family: Nunito, Helvetica, sans-serif;
   color: black;
   background-color: white;
   justify-content: center;
