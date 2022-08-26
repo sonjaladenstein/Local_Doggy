@@ -7,9 +7,11 @@
         <%else %>
           <img class="photo" src="<%= book.dog.picture %>" alt="">
         <% end %>
-        <p>Start-date: <%= book.start_date %></p>
-        <p>End-date: <%= book.end_date %></p>
-        <h3 class="dog-price"><%= book.dog.price %>€/day</h3>
+        <div class="card-text">
+          <p>Start-date: <%= book.start_date %></p>
+          <p>End-date: <%= book.end_date %></p>
+          <h3 class="dog-price"><%= book.dog.price %>€/day</h3>
+        </div>
       </div>
   <% end %>
 </div>
