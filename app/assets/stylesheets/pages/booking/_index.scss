@@ -1,2 +1,11 @@
-@import "show"
+@import "show";
 // @import "_index/components"
+
+.dog-booking-css {
+  text-decoration: none;
+  color: darkgreen;
+  font-family: Nunito, Helvetica, sans-serif;
+  text-emphasis: bold;
+  align-items: center;
+  margin: 5px;
+}
