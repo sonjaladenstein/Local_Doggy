@@ -3,10 +3,11 @@
   <div class="show-container">
 
 
+ <% if @dog.photo.attached?  %>
+   <%= cl_image_tag @dog.photo.key, class: "photo" %>
+    <%else %>
   <img class="photo" src="<%= @dog.picture %>" alt="">
-      <%# <% if dog.photo.attached?
-        <img class="photo" src="<%= cl_image_tag dog.photo.key" alt="">
-      <%# <% end %>
+    <% end %>
   <div class="info">
       <h2>
         <%= @dog.name %>

@@ -6,7 +6,11 @@
     Your Doggy - <%= @booking.dog.name %>
     </p>
   </div>
-  <img class="doggy-photo" <%= cl_image_tag @booking.dog.picture%>
+   <% if @booking.dog.photo.attached?  %>
+   <%= cl_image_tag @booking.dog.photo.key, class: "photo" %>
+    <%else %>
+  <img class="photo" src="<%= @booking.dog.picture %>" alt="">
+    <% end %>
     <div class="booking-dates">
      <p> You'll have <%=@booking.dog.name%> for the following dates: <%= @booking.start_date %> - <%= @booking.end_date %></p>
     </div>
