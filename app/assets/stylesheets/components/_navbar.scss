@@ -8,6 +8,7 @@
   position: sticky;
   z-index: 1000;
   top: 0;
+  font-family: Nunito, Helvetica, sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -36,7 +37,7 @@
   font-size: 30px;
   color: #F7F6DC;
   padding-right: 50%;
-  font-family: 'Roboto', sans-serif;
+  font-family: Nunito, Helvetica, sans-serif;
 }
 
 // .avatar {
@@ -65,15 +66,4 @@
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: transparent;
-}
-
-.dropdown-menu {
-  a {
-    color: #000000;
-    text-align: center;
-  }
-  a:hover {
-    background-color: #80c986;
-    text-align: center;
-  }
 }
