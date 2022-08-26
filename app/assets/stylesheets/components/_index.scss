@@ -209,6 +209,7 @@ body {
   a{
     color: white;
     padding: 5px;
+    text-decoration: none;
 
   }
   a:hover{
@@ -224,7 +225,11 @@ body {
   font-size: larger;
 }
 
-
+// .container-inputform{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 .container-inputform {
   width: 650px;
   margin: 0 auto;
@@ -236,4 +241,22 @@ body {
   justify-content: center;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+.banner-newbooking {
+  background-image: url("https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3Jhc3N8ZW58MHx8MHx8&w=1000&q=80");
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-createdog {
+  background-image: url("https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3Jhc3N8ZW58MHx8MHx8&w=1000&q=80");
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
