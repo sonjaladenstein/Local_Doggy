@@ -70,5 +70,10 @@
 .dropdown-menu {
   a {
     color: #000000;
+    text-align: center;
+  }
+  a:hover {
+    background-color: #80c986;
+    text-align: center;
   }
 }
