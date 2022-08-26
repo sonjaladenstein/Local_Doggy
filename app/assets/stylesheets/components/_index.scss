@@ -8,6 +8,11 @@
 // .body {
 //   background: linear-gradient(#ACE1AF, #2e8b57);
 // }
+
+body {
+  font-family: Nunito, Helvetica, sans-serif;
+}
+
 .cards-map-container{
   display: flex;
   flex-direction: row;
@@ -160,6 +165,8 @@
   background-color: white;
   align-items: center;
   margin: 0 auto;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -182,7 +189,7 @@
 }
 
 
-.banner{
+.banner {
   width: 100%;
   height: 100%;
   background-image: url("https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3Jhc3N8ZW58MHx8MHx8&w=1000&q=80");
@@ -190,6 +197,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .button {
   background: linear-gradient(#33b565, #168440);
   color: white;
@@ -215,11 +223,12 @@
 }
 
 
-.container-ndog {
+.container-inputform {
   width: 650px;
   margin: 0 auto;
-  margin-top: 20px;
+  // margin-top: 20px;
   padding: 15px;
+  font-family: Nunito, Helvetica, sans-serif;
   color: black;
   background-color: white;
   justify-content: center;
