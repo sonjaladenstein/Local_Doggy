@@ -1,4 +1,7 @@
 class BookingsController < ApplicationController
+  def index
+    @booking = current_user.bookings
+  end
 
   def create
     @dog = Dog.find(params[:dog_id])
@@ -31,11 +34,7 @@ class BookingsController < ApplicationController
     #   }
     # end
     @dog = Dog.find(params[:dog_id])
-    @markers = [{lat: @dog.geocode[0], lng: @dog.geocode[1]}]
-  end
-
-  def index
-    @bookings = Booking.all
+    @markers = [{ lat: @dog.geocode[0], lng: @dog.geocode[1] }]
   end
 
   def destroy
