@@ -1,31 +1,36 @@
-<div>
- <img src="<%= @dog.picture %>" alt="">
-  <p>
-    <%= @dog.name %>
-  </p>
 
-  <p>
-    <%= @dog.location %>
-  </p>
+<div class="banner">
+  <div class="show-container">
 
-  <p>
-    <%= @dog.description %>
-  </p>
 
-  <p>
-    <%= @dog.price %>
-  </p>
+  <img class="photo" src="<%= @dog.picture %>" alt="">
+      <%# <% if dog.photo.attached?
+        <img class="photo" src="<%= cl_image_tag dog.photo.key" alt="">
+      <%# <% end %>
+  <div class="info">
+      <h2>
+        <%= @dog.name %>
+      </h2>
 
-   <p>
-    <%= cl_image_tag @dog.photo.key, height: 100, width: 200, crop: :fill %>
-  </p>
+      <h5>Age:</h5>
+      <p><%= @dog.age %></p>
+
+      <h5>Location:</h5><p><%= @dog.location %></p>
+
+      <h5>Description:</h5>
+      <p>
+        <%= @dog.description %>
+      </p>
+    <h5>Price:</h5>
+      <p>
+        <%= @dog.price %>€ per day
+      </p>
+      <p class="button">
+        <%= link_to "Book Me", new_dog_booking_path(@dog) %>
+      </p>
+    </div>
+  </div>
 </div>
-<br>
-
- <%= link_to "BOOK A DOG", new_dog_booking_path(@dog) %>
-
-
-<br>
 
 
 <div style="width: 100%; height: 600px;"
