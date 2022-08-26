@@ -3,10 +3,11 @@
   <div class="show-container">
 
 
+ <% if @dog.photo.attached?  %>
+   <%= cl_image_tag @dog.photo.key, class: "photo" %>
+    <%else %>
   <img class="photo" src="<%= @dog.picture %>" alt="">
-      <%# <% if dog.photo.attached?
-        <img class="photo" src="<%= cl_image_tag dog.photo.key" alt="">
-      <%# <% end %>
+    <% end %>
   <div class="info">
       <h2>
         <%= @dog.name %>
@@ -32,6 +33,9 @@
   </div>
 </div>
 
+<%= link_to 'Create Dog', new_dog_path(@dog), :class => "btn btn-primary" %>
+<%= link_to 'Show Dogs', dogs_path(@dog), :class => "btn btn-primary" %>
+<%= link_to 'Bookings', bookings_path(@booking), :class => "btn btn-primary" %>
 
 <div style="width: 100%; height: 600px;"
   data-controller="map"
