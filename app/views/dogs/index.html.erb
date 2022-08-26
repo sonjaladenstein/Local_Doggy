@@ -9,9 +9,10 @@
         <% @dogs.each do |dog| %>
           <%= link_to  dog_path(dog.id) do %>
             <div class="card">
-              <img class="photo" src="<%= dog.picture %>" alt="">
               <% if dog.photo.attached?  %>
-                <img class="photo" src="<%= cl_image_tag dog.photo.key %>" alt="">
+                <%= cl_image_tag dog.photo.key, class: "photo" %>
+                <%else %>
+                <img class="photo" src="<%= dog.picture %>" alt="">
               <% end %>
               <div class = "text">
                 <h2 class ="dog-name"> <%= dog.name %></h2>
