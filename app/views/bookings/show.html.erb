@@ -23,7 +23,7 @@
 
 <%= link_to 'Create Dog', new_dog_path(@dog), :class => "btn btn-primary" %>
 <%= link_to 'Show Dogs', dogs_path(@dog), :class => "btn btn-primary" %>
-<%= link_to 'Bookings', dog_bookings_url(@bookings), :class => "btn btn-primary" %>
+<%= link_to 'Bookings', bookings_path(@booking), :class => "btn btn-primary" %>
 
  <%# <%= link_to "DELETE", dog_booking_path(@booking, @dog),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

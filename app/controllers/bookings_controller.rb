@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
-    redirect_to dogs_bookings_url
+    @booking = Booking.all
   end
 
   def create
