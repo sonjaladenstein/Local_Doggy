@@ -12,7 +12,12 @@ body {
   width: 500px;
   text-align: center;
   color: #F7F6DC;
-  position:relative; left:900px; top:200px;
+  position:relative; left:900px; top:-30px; bottom: 300px;
+}
+
+.logo-doggy-logo {
+  position: relative;
+    left: 900px;
 }
 
 // a {
@@ -28,7 +33,7 @@ body {
 
 .banner-home {
   background-image: url("https://r4.wallpaperflare.com/wallpaper/197/489/305/puppy-leaves-autumn-jumping-wallpaper-708bdf76a3682aa60580c0bedfe47968.jpg");
-  height: 800px;
+  height: 1000px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: right top;
